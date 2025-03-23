@@ -1,0 +1,16 @@
+name: Check Server Version
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  check-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show OS and Kernel Version
+        run: uname -a
